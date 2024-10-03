@@ -33,7 +33,7 @@ function removeSpecialCharacter(str) {
   //   }
   // }
 
-  //! 특수문자 효율화(replace) 및 작업략을 줄려 최적화하는 로직
+  //! 특수문자 효율화(replace) 및 작업량을 줄려 최적화하는 로직
   let _str = str.substring(0, 300)
   _str = str.replace(/[#_*~&;![\]`>\n=-]/g, '')
 
@@ -56,6 +56,8 @@ function Article(props) {
         </div>
       </div>
       <div className={'Article__thumbnail'}>
+        {/* <img src={props.image + getParametersForUnsplash({width: 1200, height: 1200, quality: 80, format: 'jpg'})} alt="thumbnail" /> */}
+        {/* 이미지를 최적화하는 로직 */}
         <img src={props.image + getParametersForUnsplash({width: 240, height: 240, quality: 80, format: 'jpg'})} alt="thumbnail" />
       </div>
     </div>
